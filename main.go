@@ -53,7 +53,7 @@ func main() {
 
 	wg.Add(MAXGRT)
 	for i := 1; i <= MAXGRT; i++ {
-		worm()
+		go worm()
 	}
 	close(task)
 	wg.Wait()
